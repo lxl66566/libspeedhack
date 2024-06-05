@@ -8,7 +8,7 @@ ifeq ($(PORTABLE_X86),y)
 # than the one they were built on (within reason).
 # So for extra portability, build on the oldest system you can.
 EXTRAFLAGS += -nodefaultlibs -static-libgcc -static-libstdc++
-EXTRALIBS += -lc -Wl,-Bstatic -lstdc++ -lgcc -lgcc_eh
+EXTRALIBS += -lc -Wl,-Bstatic -lstdc++ -lgcc -lgcc_eh -lm
 else
 EXTRALIBS += -ldl
 endif
